@@ -24,7 +24,7 @@ const Header = () => {
           <Link to={'/'}>Home</Link>
           <Link to={'/proposals'}>Proposals</Link>
           <Link to={'/projects'}>Projects</Link>
-          <i className='fa-solid fa-xmark' onClick={consume} />
+          <CloseButton className='fa-solid fa-xmark' onClick={consume} />
         </NavContainer>
       </HeaderWrapper>
       <Spacer />
@@ -68,6 +68,13 @@ const Spacer = styled.div`
   height: 8vh;
   z-index: -10;
   top: 0;
+`;
+
+const CloseButton = styled.i`
+  cursor: pointer;
+  &:hover {
+    color: var(--color-accent);
+  }
 `;
 
 export default Header;

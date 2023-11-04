@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import ProposalItem from './proposalItem';
+import styled from 'styled-components';
 
 const proposalInfoHardcoded: Proposal[] = [
   {
     id: 21,
-    imageUrl: '',
+    imageUrl: 'https://avatars.githubusercontent.com/u/37547658?v=4',
     type: 'concert',
     name: 'roomates sisters jazz math rock',
     date: 'never',
@@ -13,7 +14,7 @@ const proposalInfoHardcoded: Proposal[] = [
   },
   {
     id: 12323,
-    imageUrl: '',
+    imageUrl: 'https://avatars.githubusercontent.com/u/37547658?v=4',
     type: 'art exhibition',
     name: 'someones art exhibit',
     date: 'idk',
@@ -36,7 +37,7 @@ const Proposals: React.FC = () => {
 
   return (
     <>
-      <h2>Open Proposals</h2>
+      <Title>Open Proposals</Title>
       <div>
         {proposalInfoHardcoded.map((proposal) => (
           <ProposalItem
@@ -54,5 +55,9 @@ const Proposals: React.FC = () => {
     </>
   );
 };
+
+const Title = styled.h2`
+  text-align: center;
+`;
 
 export default Proposals;
