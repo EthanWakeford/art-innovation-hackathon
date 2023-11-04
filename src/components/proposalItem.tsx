@@ -51,6 +51,7 @@ const SmallProposal = styled.div`
   border: 1px whitesmoke solid;
   justify-content: space-between;
   padding: 0 10%;
+  align-items: center;
 `;
 
 const SmallImage = styled.img`
