@@ -1,4 +1,5 @@
 interface Proposal {
+  id: number;
   type: string;
   name: string;
   date: string;
