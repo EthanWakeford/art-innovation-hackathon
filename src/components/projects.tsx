@@ -51,7 +51,8 @@ const Projects: React.FC = () => {
   ];
   return (
     <>
-      <div>projects go</div>
+      <h2>Projects</h2>
+      <p>Explore the projects that have reached their proposal goal and are currently being planned.</p>
       <ProjectCardContainer projects={projects} />
     </>
   );
