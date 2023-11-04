@@ -27,15 +27,13 @@ const Proposals: React.FC = () => {
   const handleClick = (id: number) => {
     const copyClickedItems = new Set(clickedItems);
     if (copyClickedItems.has(id)) {
-      console.log('here');
       copyClickedItems.delete(id);
     } else {
       copyClickedItems.add(id);
-      console.log('not here');
     }
     setClickedItems(copyClickedItems);
   };
-  console.log(clickedItems);
+
   return (
     <>
       <h2>Open Proposals</h2>
