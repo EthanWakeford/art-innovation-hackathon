@@ -1,7 +1,7 @@
 const Projects: React.FC = () => {
   return (
     <>
-      <div>projects go here</div>
+      <div>projects go</div>
     </>
   );
 };
