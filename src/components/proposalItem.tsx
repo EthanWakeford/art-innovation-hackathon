@@ -54,6 +54,7 @@ const LargeProposal = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 0 10%;
+  text-align: right;
 `;
 
 const CloseButton = styled.i`

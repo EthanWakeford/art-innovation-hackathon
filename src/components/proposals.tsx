@@ -13,7 +13,7 @@ const proposalInfoHardcoded: Proposal[] = [
       'idk when its gonna happen but its gonna be greate lorem ipsum sit dolor amet whaterver',
   },
   {
-    id: 12323,
+    id: 1232323,
     imageUrl: 'https://avatars.githubusercontent.com/u/37547658?v=4',
     type: 'art exhibition',
     name: 'someones art exhibit',
@@ -21,7 +21,7 @@ const proposalInfoHardcoded: Proposal[] = [
     textInfo: 'this sucks and no one wants to go to it',
   },
   {
-    id: 12323,
+    id: 123233,
     imageUrl: 'https://avatars.githubusercontent.com/u/37547658?v=4',
     type: 'art exhibition',
     name: 'someones art exhibit',
@@ -29,7 +29,7 @@ const proposalInfoHardcoded: Proposal[] = [
     textInfo: 'this sucks and no one wants to go to it',
   },
   {
-    id: 12323,
+    id: 123223233,
     imageUrl: 'https://avatars.githubusercontent.com/u/37547658?v=4',
     type: 'art exhibition',
     name: 'someones art exhibit',
@@ -37,7 +37,7 @@ const proposalInfoHardcoded: Proposal[] = [
     textInfo: 'this sucks and no one wants to go to it',
   },
   {
-    id: 12323,
+    id: 1234323,
     imageUrl: 'https://avatars.githubusercontent.com/u/37547658?v=4',
     type: 'art exhibition',
     name: 'someones art exhibit',
