@@ -1,4 +1,4 @@
-interface Proposals {
+interface Proposal {
   type: string;
   name: string;
   date: string;
