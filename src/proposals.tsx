@@ -1,4 +1,4 @@
-const Proposals = () => {
+const Proposals: React.FC = () => {
   return (
     <>
       <div>proposals go here</div>
