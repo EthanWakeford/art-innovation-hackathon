@@ -1,7 +1,7 @@
 import { ProjectCardProps } from "./ProjectCard";
 import ProjectCardContainer from "./ProjectCardContainer";
 
-const Projects: React.FC = () => {
+export const Projects: React.FC = () => {
   const projects: ProjectCardProps[] = [
     {
       id: '1',
