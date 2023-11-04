@@ -20,6 +20,30 @@ const proposalInfoHardcoded: Proposal[] = [
     date: 'idk',
     textInfo: 'this sucks and no one wants to go to it',
   },
+  {
+    id: 12323,
+    imageUrl: 'https://avatars.githubusercontent.com/u/37547658?v=4',
+    type: 'art exhibition',
+    name: 'someones art exhibit',
+    date: 'idk',
+    textInfo: 'this sucks and no one wants to go to it',
+  },
+  {
+    id: 12323,
+    imageUrl: 'https://avatars.githubusercontent.com/u/37547658?v=4',
+    type: 'art exhibition',
+    name: 'someones art exhibit',
+    date: 'idk',
+    textInfo: 'this sucks and no one wants to go to it',
+  },
+  {
+    id: 12323,
+    imageUrl: 'https://avatars.githubusercontent.com/u/37547658?v=4',
+    type: 'art exhibition',
+    name: 'someones art exhibit',
+    date: 'idk',
+    textInfo: 'this sucks and no one wants to go to it',
+  },
 ];
 
 const Proposals: React.FC = () => {
