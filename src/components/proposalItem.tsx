@@ -23,12 +23,13 @@ const ProposalItem: React.FC<ProposalItemProps> = ({
             className='fa-solid fa-xmark'
             onClick={() => onClick(id)}
           />
-          <p>{type}</p>
-          <img src={imageUrl} alt={`${name} icon`} />
-          <h3>{name}</h3>
-          <p>{date}</p>
-          <p>{textInfo}</p>
-          <p>this is big now</p>
+          <LargeImage src={imageUrl} alt={`${name} icon`} />
+          <ContentHolder>
+            <h3>{name}</h3>
+            <p>{type}</p>
+            <p>{`Date: ${date}`}</p>
+            <p>{`About: ${textInfo}`}</p>
+          </ContentHolder>
         </LargeProposal>
       </>
     );
@@ -45,25 +46,16 @@ const ProposalItem: React.FC<ProposalItemProps> = ({
   }
 };
 
-const SmallProposal = styled.div`
-  display: flex;
-  background-color: black;
-  border: 1px whitesmoke solid;
-  justify-content: space-between;
-  padding: 0 10%;
-`;
-
-const SmallImage = styled.img`
-  border-radius: 50%;
-  height: 100px;
-  width: 100px;
-`;
-
 const LargeProposal = styled.div`
   position: relative;
   min-height: 40%;
   background-color: black;
   border: 5px var(--color-primary) solid;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10%;
+  text-align: right;
+  margin: 10px 0;
 `;
 
 const CloseButton = styled.i`
@@ -75,6 +67,33 @@ const CloseButton = styled.i`
   &:hover {
     color: var(--color-accent);
   }
+`;
+
+const LargeImage = styled.img`
+  width: 400px;
+  height: 400px;
+`;
+
+const ContentHolder = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+`;
+
+const SmallProposal = styled.div`
+  display: flex;
+  background-color: black;
+  border: 1px whitesmoke solid;
+  justify-content: space-between;
+  padding: 0 10%;
+  align-items: center;
+  margin: 10px 0;
+`;
+
+const SmallImage = styled.img`
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
 `;
 
 export default ProposalItem;
