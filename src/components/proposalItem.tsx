@@ -55,6 +55,7 @@ const LargeProposal = styled.div`
   justify-content: space-between;
   padding: 0 10%;
   text-align: right;
+  margin: 10px 0;
 `;
 
 const CloseButton = styled.i`
@@ -86,6 +87,7 @@ const SmallProposal = styled.div`
   justify-content: space-between;
   padding: 0 10%;
   align-items: center;
+  margin: 10px 0;
 `;
 
 const SmallImage = styled.img`
