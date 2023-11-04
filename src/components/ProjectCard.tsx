@@ -8,6 +8,7 @@ export interface ProjectCardProps {
   date: string;
   imageUrl: string;
   textInfo: string;
+  onClick?: () => void;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -15,21 +16,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   date,
   imageUrl,
   textInfo,
+  onClick,
 }) => {
-  // Handler function for when the card is clicked
-  const handleCardClick = () => {
-    // Navigate to the project's page
-    // This can be done using react-router's useHistory hook or window.location, depending on your setup
-    // window.location.href = `/projects/${project.id}`; // For example
-  };
-
   return (
-    <ProjectCardContainer
+    <ProjectCardBody
       className="project-card"
-      onClick={handleCardClick}
       role="button"
       tabIndex={0}
       backgroundImage={imageUrl}
+      onClick={onClick}
     >
       <ImageContainer>
         <CardImage src={imageUrl} alt={name} />
@@ -39,7 +34,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       <time dateTime={date}>
         Event Date: {new Date(date).toLocaleDateString()}
       </time>
-    </ProjectCardContainer>
+    </ProjectCardBody>
   );
 };
 
@@ -82,7 +77,7 @@ export const CardTitle = styled.h2`
   transition: all var(--animation-speed-medium) ease;
 `;
 
-const ProjectCardContainer = styled.div<{ backgroundImage: string }>`
+const ProjectCardBody = styled.div<{ backgroundImage: string }>`
   /* border: 1px solid var(--color-border); */
   padding: 0px 0px;
   border-radius: 20px;
