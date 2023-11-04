@@ -1,21 +1,21 @@
 import styled from "styled-components";
 
-// Define the Project type with the fields you expect to use
-type Project = {
-  id: string;
+interface ProjectCardProps {
+  id?: string;
+  open?: boolean;
+  type?: string;
   name: string;
-  description: string;
+  date: string;
   imageUrl: string;
-  eventDate: string; // Use ISO string format or Date type based on your preference
-};
+  textInfo: string;
+}
 
-// Define the props for the ProjectCard component
-type ProjectCardProps = {
-  project: Project;
-};
-
-// The ProjectCard component
-const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({
+  name,
+  date,
+  imageUrl,
+  textInfo,
+}) => {
   // Handler function for when the card is clicked
   const handleCardClick = () => {
     // Navigate to the project's page
@@ -29,15 +29,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       onClick={handleCardClick}
       role="button"
       tabIndex={0}
-      backgroundImage={project.imageUrl}
+      backgroundImage={imageUrl}
     >
       <ImageContainer>
-        <CardImage src={project.imageUrl} alt={project.name} />
+        <CardImage src={imageUrl} alt={name} />
       </ImageContainer>
-      <CardTitle>{project.name}</CardTitle>
-      <p>{project.description}</p>
-      <time dateTime={project.eventDate}>
-        Event Date: {new Date(project.eventDate).toLocaleDateString()}
+      <CardTitle>{name}</CardTitle>
+      <p>{textInfo}</p>
+      <time dateTime={date}>
+        Event Date: {new Date(date).toLocaleDateString()}
       </time>
     </ProjectCardContainer>
   );
