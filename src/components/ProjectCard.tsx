@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-interface ProjectCardProps {
+export interface ProjectCardProps {
   id?: string;
   open?: boolean;
   type?: string;
@@ -35,13 +35,23 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         <CardImage src={imageUrl} alt={name} />
       </ImageContainer>
       <CardTitle>{name}</CardTitle>
-      <p>{textInfo}</p>
+      <Details>{textInfo}</Details>
       <time dateTime={date}>
         Event Date: {new Date(date).toLocaleDateString()}
       </time>
     </ProjectCardContainer>
   );
 };
+
+const Details = styled.p`
+  display: flex;
+  box-sizing: border-box;
+  padding: 0px 10px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--animation-speed-medium) ease;
+`;
 
 export const CardImage = styled.img`
   width: 100%;
