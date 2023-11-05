@@ -76,7 +76,7 @@ const CreateProposal: React.FC<CreateProposalProps> = ({ onClose }) => {
         <SupporterWrapper>
           {/* Supporter components will go here */}
         </SupporterWrapper>
-        <SupportButton>Submit</SupportButton>
+        <SupportButton onClick={onClose}>Submit</SupportButton>
       </ModalContent>
     </ModalWrapper>
   );
