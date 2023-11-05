@@ -66,7 +66,7 @@ const Details = styled.p`
 export const CardImage = styled.img`
   width: 100%;
   height: 200px;
-  border-radius: 4px;
+  border-radius: 20px;
   object-fit: cover;
   object-position: center;
   box-shadow: 0px 0px 0.5rem var(--color-secondary);
@@ -152,6 +152,7 @@ const ProjectCardBody = styled.div<{ $backgroundImage: string }>`
     cursor: pointer;
     overflow: visible;
     border: none;
+    transform: scale(1.05);
   }
   &:hover ${CardTitle} {
     color: var(--color-accent);

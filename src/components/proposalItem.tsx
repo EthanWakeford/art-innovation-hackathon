@@ -47,24 +47,27 @@ const ProposalItem: React.FC<ProposalItemProps> = ({
 };
 
 const About = styled.p`
-  text-align: left;
+  text-align: right;
   @media (max-width: 768px) {
     text-align: center;
   }
 `;
 
 const LargeProposal = styled.div`
+  border-radius: 10px;
   position: relative;
   min-height: 40%;
   background-color: black;
   border: 5px var(--color-primary) solid;
   display: flex;
   justify-content: space-between;
-  padding: 0 10%;
+  padding: 0 5%;
   text-align: right;
   margin: 0.5rem 0;
+  font-size: large;
   @media (max-width: 768px) {
     flex-direction: column;
+    font-size: medium;
     align-items: center;
     padding: 0;
   }
@@ -86,9 +89,13 @@ const LargeImage = styled.img`
   width: 400px;
   height: 400px;
   object-fit: cover;
+  margin: 5%;
+  margin-left: 0;
+  border-radius: 10px;
   @media (max-width: 768px) {
     width: 100%;
     height: 200px;
+    margin: 0;
   }
 `;
 
@@ -103,6 +110,7 @@ const ContentHolder = styled.div`
 `;
 
 const SmallProposal = styled.div`
+  border-radius: 10px;
   display: flex;
   background-color: black;
   border: 1px whitesmoke solid;

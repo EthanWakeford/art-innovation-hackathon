@@ -32,10 +32,10 @@ const Header = () => {
         />
         <NavContainer $hamburgerEaten={hamburgerEaten}>
           <Proposal onClick={toggleCreateProposal}>Create Engine</Proposal>
-          <Link to={"/"} onClick={closeBurger}>
+          <Link to={'/'} onClick={closeBurger}>
             Home
           </Link>
-          <Link to={"/engines"} onClick={closeBurger}>
+          <Link to={'/engines'} onClick={closeBurger}>
             Engines
           </Link>
           <Link to={'/projects'} onClick={closeBurger}>
@@ -114,7 +114,7 @@ const Title = styled(Link)`
 
 const Hamburger = styled.i<{ $hamburgerEaten: boolean }>`
   position: absolute;
-  top: 3.5vh;
+  top: 20px;
   right: 2vw;
   font-size: xx-large;
   cursor: pointer;
