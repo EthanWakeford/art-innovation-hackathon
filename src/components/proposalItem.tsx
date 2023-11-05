@@ -76,6 +76,7 @@ const CloseButton = styled.i`
   right: 1rem;
   font-size: 2rem;
   cursor: pointer;
+  text-shadow: black 0 0 10px;
   &:hover {
     color: var(--color-accent);
   }

@@ -1,7 +1,104 @@
-import styled from "styled-components";
-import ProjectCard, { ProjectCardProps } from "./ProjectCard";
+import styled from 'styled-components';
+import ProjectCard, { ProjectCardProps } from './ProjectCard';
+import artSoiree from '../assets/Art Soiree.png';
+import creativeMixer from '../assets/Creative Mixer.png';
+import hackathon from '../assets/Hackathon.png';
+import RB from '../assets/R&B.png';
+import incubator from '../assets/Incubator.png';
 
 const projects: ProjectCardProps[] = [
+  {
+    id: '0',
+    name: 'ArtSync Collective',
+    open: true,
+    type: 'Kickoff Mixer',
+    date: 'Dec 10, 2023',
+    imageUrl: creativeMixer,
+    textInfo:
+      'This event marks the launch of ArtSync, a new Tulsa collective built around Tulsa art collaborators. With ArtSync, creatives can form groups, plan events, and present their projects in local event spaces. This kickoff mixer will include introductions to the platform’s features, live demos, and networking sessions.',
+  },
+  {
+    id: '-1',
+    name: 'R&B Tulsa 2023',
+    type: 'Festival',
+    date: 'Dec 15, 2023',
+    imageUrl: RB,
+    textInfo:
+      ' A dynamic festival event where many of the top R&B groups in Tulsa showcase their music to the community. Each group will have the opportunity to set up a booth and sell merch to festival goers.',
+  },
+  {
+    id: '-2',
+    name: 'World Creators’ Hackathon',
+    type: 'Workshop and Competition',
+    imageUrl: hackathon,
+    date: 'an 15-17, 2024',
+    textInfo:
+      'Over a 48-hour period, creatives from all over the world will form teams to devise innovative art projects. Microfunders can participate by sponsoring materials and resources, with NEAR smart contracts tracking contributions and ensuring fair distribution of proceeds from future sales.',
+  },
+  {
+    id: '-3',
+    name: 'Tulsa Artists & Patrons Soiree',
+    type: 'Networking Gala',
+    date: 'Jan 25, 2024',
+    imageUrl: artSoiree,
+    textInfo:
+      'An exclusive evening event connecting Tulsan artists with community patrons. The soiree includes a silent auction of both physical and digital art (NFTs), with smart contracts ensuring authenticity and artist royalties.',
+  },
+  {
+    id: '-4',
+    name: 'The Creative Incubator',
+    type: 'Mentorship Program Launch',
+    imageUrl: incubator,
+    date: 'Feb 1, 2024',
+    textInfo:
+      'This program pairs experienced artists and business mentors with emerging creatives. The platform will facilitate mentorship agreements via smart contracts, ensuring clear objectives, milestones, and equity arrangements for all parties involved.',
+  },
+  {
+    id: '0',
+    name: 'ArtSync Collective',
+    open: true,
+    type: 'Kickoff Mixer',
+    date: 'Dec 10, 2023',
+    imageUrl: creativeMixer,
+    textInfo:
+      'This event marks the launch of ArtSync, a new Tulsa collective built around Tulsa art collaborators. With ArtSync, creatives can form groups, plan events, and present their projects in local event spaces. This kickoff mixer will include introductions to the platform’s features, live demos, and networking sessions.',
+  },
+  {
+    id: '-1',
+    name: 'R&B Tulsa 2023',
+    type: 'Festival',
+    date: 'Dec 15, 2023',
+    imageUrl: RB,
+    textInfo:
+      ' A dynamic festival event where many of the top R&B groups in Tulsa showcase their music to the community. Each group will have the opportunity to set up a booth and sell merch to festival goers.',
+  },
+  {
+    id: '-2',
+    name: 'World Creators’ Hackathon',
+    type: 'Workshop and Competition',
+    imageUrl: hackathon,
+    date: 'an 15-17, 2024',
+    textInfo:
+      'Over a 48-hour period, creatives from all over the world will form teams to devise innovative art projects. Microfunders can participate by sponsoring materials and resources, with NEAR smart contracts tracking contributions and ensuring fair distribution of proceeds from future sales.',
+  },
+  {
+    id: '-3',
+    name: 'Tulsa Artists & Patrons Soiree',
+    type: 'Networking Gala',
+    date: 'Jan 25, 2024',
+    imageUrl: artSoiree,
+    textInfo:
+      'An exclusive evening event connecting Tulsan artists with community patrons. The soiree includes a silent auction of both physical and digital art (NFTs), with smart contracts ensuring authenticity and artist royalties.',
+  },
+  {
+    id: '-4',
+    name: 'The Creative Incubator',
+    type: 'Mentorship Program Launch',
+    imageUrl: incubator,
+    date: 'Feb 1, 2024',
+    textInfo:
+      'This program pairs experienced artists and business mentors with emerging creatives. The platform will facilitate mentorship agreements via smart contracts, ensuring clear objectives, milestones, and equity arrangements for all parties involved.',
+  },
   {
     id: "1",
     open: true,

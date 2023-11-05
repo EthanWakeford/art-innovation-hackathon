@@ -1,7 +1,7 @@
 // DetailedView.tsx
 
-import styled from "styled-components";
-import { ProjectCardProps } from "./ProjectCard";
+import styled from 'styled-components';
+import { ProjectCardProps } from './ProjectCard';
 
 interface DetailedViewProps {
   project: ProjectCardProps; // Using the Project interface from earlier
@@ -15,7 +15,10 @@ const ProjectCardDetailedView: React.FC<DetailedViewProps> = ({
   return (
     <ModalWrapper>
       <ModalContent>
-        <CloseButton onClick={onClose}>&times;</CloseButton>
+        <CloseButton
+          className='fa-solid fa-xmark'
+          onClick={onClose}
+        ></CloseButton>
         <HeroImage src={project.imageUrl} alt={project.name} />
         <Title>{project.name}</Title>
         <Description>{project.textInfo}</Description>
@@ -43,6 +46,7 @@ const ModalWrapper = styled.div`
 `;
 
 const ModalContent = styled.div`
+  position: relative;
   border-radius: 10px;
   width: 90vw; // Ensures padding from the screen edges
   height: 90vh; // Doesn't exceed the viewport height
@@ -51,17 +55,16 @@ const ModalContent = styled.div`
   z-index: 999; // Ensure it's above the pseudo-element
 `;
 
-const CloseButton = styled.span`
+const CloseButton = styled.i`
   position: absolute;
-  top: 2rem;
-  right: 8vw;
-  font-size: 1.5em;
-  border-radius: 25px;
-  padding: 0.25em;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
   cursor: pointer;
-  color: var(--color-accent);
+  text-shadow: black 0 0 10px;
+  /* color: var(--color-primary); */
   &:hover {
-    color: var(--color-primary);
+    color: var(--color-accent);
   }
 `;
 

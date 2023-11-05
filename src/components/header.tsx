@@ -118,6 +118,7 @@ const Hamburger = styled.i<{ $hamburgerEaten: boolean }>`
   right: 2vw;
   font-size: xx-large;
   cursor: pointer;
+  text-shadow: black 0 0 10px;
   &:hover {
     color: var(--color-accent);
   }
@@ -163,6 +164,7 @@ const Spacer = styled.div`
 `;
 
 const CloseButton = styled.i`
+  text-shadow: black 0 0 10px;
   cursor: pointer;
   &:hover {
     color: var(--color-accent);
