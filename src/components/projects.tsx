@@ -161,7 +161,7 @@ export const Projects: React.FC = () => {
       <PageTitleContainer>
         <h2>Projects</h2>
         <p>
-          Explore the projects that have reached their proposal goal and are
+          Explore the Engines that have reached their fuel requirements and are
           currently being planned.
         </p>
       </PageTitleContainer>

@@ -9,13 +9,13 @@ export const GlobalStyle = createGlobalStyle`
     --color-background-main: #2e2d2d;
     --color-background-main-trans: hsla(249, 11%, 12%, 0.8);
     --color-background-alt: hsl(249, 11%, 15%);
-    --color-primary: #ffbd59;
-    --color-secondary: #1d324f;
-    --color-accent: #c82735;
-    --color-tertiary: #20abe8;
+    --color-primary: #f3b268;
+    --color-secondary: #dc4259;
+    --color-accent: #5ce4e4;
+    --color-tertiary: #424085;
 
     --color-text-primary: #e9f1f7;
-    --color-text-secondary: #c9d1d9;
+    --color-text-secondary: #5ce4e4;
     --color-text-inverse: #fff;
 
     --color-success: #2ea44f;

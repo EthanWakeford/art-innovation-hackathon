@@ -69,7 +69,7 @@ export const CardImage = styled.img`
   border-radius: 4px;
   object-fit: cover;
   object-position: center;
-  box-shadow: 0px 0px 0.5rem var(--color-primary);
+  box-shadow: 0px 0px 0.5rem var(--color-secondary);
   transition: all var(--animation-speed-medium) ease;
 `;
 
@@ -148,7 +148,7 @@ const ProjectCardBody = styled.div<{ $backgroundImage: string }>`
 
   &:hover {
     text-decoration: none;
-    box-shadow: 0px 0px 10px var(--color-accent);
+    box-shadow: 0px 0px 10px var(--color-secondary);
     cursor: pointer;
     overflow: visible;
     border: none;
