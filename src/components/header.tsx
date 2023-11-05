@@ -1,8 +1,8 @@
-import styled from "styled-components";
-import { Link } from "react-router-dom";
-import { useState } from "react";
-import CreateProposal from "./CreateProposal";
-import logo from "../assets/enginenear.png";
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import CreateProposal from './CreateProposal';
+import logo from '../assets/enginenear.png';
 
 const Header = () => {
   const [hamburgerEaten, setHamburgerEaten] = useState<boolean>(false);
@@ -24,10 +24,10 @@ const Header = () => {
     <>
       <HeaderWrapper>
         <Logo src={logo}></Logo>
-        <Title to={"/"}>EngineNEAR</Title>
+        <Title to={'/'}>EngineNEAR</Title>
         <Hamburger
           onClick={consume}
-          className="fa-solid fa-bars"
+          className='fa-solid fa-bars'
           $hamburgerEaten={hamburgerEaten}
         />
         <NavContainer $hamburgerEaten={hamburgerEaten}>
@@ -38,10 +38,10 @@ const Header = () => {
           <Link to={"/engines"} onClick={closeBurger}>
             Engines
           </Link>
-          <Link to={"/projects"} onClick={closeBurger}>
+          <Link to={'/projects'} onClick={closeBurger}>
             Projects
           </Link>
-          <CloseButton className="fa-solid fa-xmark" onClick={consume} />
+          <CloseButton className='fa-solid fa-xmark' onClick={consume} />
         </NavContainer>
       </HeaderWrapper>
       <Spacer />
@@ -122,7 +122,7 @@ const Hamburger = styled.i<{ $hamburgerEaten: boolean }>`
   &:hover {
     color: var(--color-accent);
   }
-  ${(props) => props.$hamburgerEaten && "display: none"}
+  ${(props) => props.$hamburgerEaten && 'display: none'}
 `;
 
 const NavContainer = styled.div<{ $hamburgerEaten: boolean }>`
@@ -145,21 +145,21 @@ const NavContainer = styled.div<{ $hamburgerEaten: boolean }>`
     font-weight: 400;
     color: var(--color-background);
     text-align: center;
-    top: 13vh;
+    top: 80px;
     right: 0;
     left: 0;
     z-index: 11;
-    ${(props) => props.$hamburgerEaten && "display: flex"};
+    ${(props) => props.$hamburgerEaten && 'display: flex'};
   }
-  ${(props) => props.$hamburgerEaten && "display: flex"}
+  ${(props) => props.$hamburgerEaten && 'display: flex'}
 `;
 
 const Spacer = styled.div`
-  height: 11vh;
+  height: 80px;
   z-index: -10;
   top: 0;
   @media (max-width: 768px) {
-    height: 13vh;
+    height: 80px;
   }
 `;
 
