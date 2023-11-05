@@ -4,6 +4,7 @@ import { useState } from 'react';
 
 export interface ProjectCardProps extends Project {
   onClick?: () => void;
+  open?: boolean;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({

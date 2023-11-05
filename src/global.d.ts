@@ -9,7 +9,6 @@ interface Proposal {
 
 interface Project {
   id?: string;
-  open?: boolean;
   type?: string;
   name: string;
   date: string;

@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import styled from 'styled-components';
 
 interface CreateProposalProps {
@@ -5,6 +6,14 @@ interface CreateProposalProps {
 }
 
 const CreateProposal: React.FC<CreateProposalProps> = ({ onClose }) => {
+  const [project, setProject] = useState<Project>({id: '';
+    type?: string;
+    name: string;
+    date: string;
+    imageUrl: string;
+    textInfo: string;
+  }});
+
   return (
     <ModalWrapper>
       <ModalContent>
