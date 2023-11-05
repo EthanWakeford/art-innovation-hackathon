@@ -31,7 +31,7 @@ const ProjectCardDetailedView: React.FC<DetailedViewProps> = ({
 
 const ModalWrapper = styled.div`
   position: fixed;
-  top: 0;
+  top: 7.5vh;
   left: 0;
   right: 0;
   bottom: 0;
@@ -39,7 +39,7 @@ const ModalWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000; // Ensure it's above other content
+  z-index: 998; // Ensure it's above other content
 `;
 
 const ModalContent = styled.div`
@@ -48,6 +48,7 @@ const ModalContent = styled.div`
   height: 90vh; // Doesn't exceed the viewport height
   overflow-y: auto; // Allows scrolling for longer content
   background-color: var(--color-background-alt);
+  z-index: 999; // Ensure it's above the pseudo-element
 `;
 
 const CloseButton = styled.span`

@@ -1,7 +1,7 @@
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-import { useState } from 'react';
-import CreateProposal from './CreateProposal';
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+import { useState } from "react";
+import CreateProposal from "./CreateProposal";
 
 const Header = () => {
   const [hamburgerEaten, setHamburgerEaten] = useState<boolean>(false);
@@ -23,23 +23,23 @@ const Header = () => {
     <>
       <HeaderWrapper>
         <Proposal onClick={toggleCreateProposal}>Create Proposal</Proposal>
-        <Title to={'/'}>Hackython</Title>
+        <Title to={"/"}>NEARly Events</Title>
         <Hamburger
           onClick={consume}
-          className='fa-solid fa-bars'
+          className="fa-solid fa-bars"
           $hamburgerEaten={hamburgerEaten}
         />
         <NavContainer $hamburgerEaten={hamburgerEaten}>
-          <Link to={'/'} onClick={closeBurger}>
+          <Link to={"/"} onClick={closeBurger}>
             Home
           </Link>
-          <Link to={'/proposals'} onClick={closeBurger}>
+          <Link to={"/proposals"} onClick={closeBurger}>
             Proposals
           </Link>
-          <Link to={'/projects'} onClick={closeBurger}>
+          <Link to={"/projects"} onClick={closeBurger}>
             Projects
           </Link>
-          <CloseButton className='fa-solid fa-xmark' onClick={consume} />
+          <CloseButton className="fa-solid fa-xmark" onClick={consume} />
         </NavContainer>
       </HeaderWrapper>
       <Spacer />
@@ -56,10 +56,24 @@ const Proposal = styled.p`
   font-weight: 500;
   color: var(--color-primary);
   text-decoration: inherit;
+  z-index: 11;
   &:hover {
-    color: var(--color-accent);
+    color: var(--color-secondary);
   }
   cursor: pointer;
+  @media (max-width: 768px) {
+    /* display: none; */
+    top: 95vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    background-color: var(--color-accent);
+    border-radius: 24px;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--color-background);
+    text-align: center;
+  }
 `;
 
 const HeaderWrapper = styled.div`
@@ -78,8 +92,14 @@ const Title = styled(Link)`
   text-align: center;
   margin: 0;
   width: max-content;
-  font-size: 50px;
+  font-size: 3rem;
   font-weight: 700;
+  @media (max-width: 768px) {
+    font-size: 2rem;
+    text-align: start;
+    position: absolute;
+    left: 2vw;
+  }
 `;
 
 const Hamburger = styled.i<{ $hamburgerEaten: boolean }>`
@@ -91,7 +111,7 @@ const Hamburger = styled.i<{ $hamburgerEaten: boolean }>`
   &:hover {
     color: var(--color-accent);
   }
-  ${(props) => props.$hamburgerEaten && 'display: none'}
+  ${(props) => props.$hamburgerEaten && "display: none"}
 `;
 
 const NavContainer = styled.div<{ $hamburgerEaten: boolean }>`
@@ -100,9 +120,27 @@ const NavContainer = styled.div<{ $hamburgerEaten: boolean }>`
   right: 2vw;
   font-size: larger;
   display: none;
-  gap: 10px;
+  gap: 1.5rem;
   align-items: center;
-  ${(props) => props.$hamburgerEaten && 'display: flex'}
+  @media (max-width: 768px) {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--color-background-alt);
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--color-background);
+    text-align: center;
+    top: 8vh;
+    right: 0;
+    left: 0;
+    z-index: 11;
+    ${(props) => props.$hamburgerEaten && "display: flex"};
+  }
+  ${(props) => props.$hamburgerEaten && "display: flex"}
 `;
 
 const Spacer = styled.div`

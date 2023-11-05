@@ -55,7 +55,12 @@ const LargeProposal = styled.div`
   justify-content: space-between;
   padding: 0 10%;
   text-align: right;
-  margin: 10px 0;
+  margin: 0.5rem 0;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
 `;
 
 const CloseButton = styled.i`
@@ -72,6 +77,11 @@ const CloseButton = styled.i`
 const LargeImage = styled.img`
   width: 400px;
   height: 400px;
+  object-fit: cover;
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 200px;
+  }
 `;
 
 const ContentHolder = styled.div`
@@ -87,7 +97,8 @@ const SmallProposal = styled.div`
   justify-content: space-between;
   padding: 0 10%;
   align-items: center;
-  margin: 10px 0;
+  margin: 0.5rem 0;
+  transition: transform 0.3s ease-out;
 `;
 
 const SmallImage = styled.img`

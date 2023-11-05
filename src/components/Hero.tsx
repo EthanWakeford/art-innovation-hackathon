@@ -104,7 +104,6 @@ const HeroContents = styled.div`
   align-items: center;
   justify-content: space-around;
   width: 100vw;
-  margin-bottom: 2rem;
   position: relative;
   z-index: 1; // Ensure that HeroContents is above the pseudo-element
 
@@ -131,13 +130,17 @@ const HeroTagline = styled.div`
   align-items: center;
   justify-content: center;
   padding: 1rem 0;
+  @media (max-width: 768px) {
+    padding: 0;
+  }
   h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
   }
   p {
     font-size: 1rem;
     margin-bottom: 1rem;
+    padding: 0 1rem;
   }
 `;
 

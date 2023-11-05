@@ -33,7 +33,7 @@ const ProjectCardContainer: React.FC<ProjectCardContainerProps> = ({
 const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 16px; // Or any spacing you like
+  gap: 0.2rem; // Or any spacing you like
   justify-content: center;
   margin: 20px; // Or any margin you prefer
 `;
