@@ -2,7 +2,7 @@
 
 EngineNEAR is a smart contract dApp for artists and investors to secure funding, ensure fair payments, and engage in creative profit-sharing.
 
-!(https://storage.googleapis.com/taikai-storage/images/2fdaaf90-7c21-11ee-be37-e35334191813Mockups.png)
+![](https://storage.googleapis.com/taikai-storage/images/2fdaaf90-7c21-11ee-be37-e35334191813Mockups.png)
 
 ## EngineNEAR: Fuel a creative Engine, get paid from its output.
 
