@@ -8,7 +8,10 @@ interface DetailedViewProps {
   onClose: () => void; // Function to close the modal
 }
 
-const ProjectCardDetailedView: React.FC<DetailedViewProps> = ({ project, onClose }) => {
+const ProjectCardDetailedView: React.FC<DetailedViewProps> = ({
+  project,
+  onClose,
+}) => {
   return (
     <ModalWrapper>
       <ModalContent>
@@ -50,9 +53,15 @@ const ModalContent = styled.div`
 const CloseButton = styled.span`
   position: absolute;
   top: 2rem;
-  right: 2rem;
+  right: 8vw;
   font-size: 1.5em;
+  border-radius: 25px;
+  padding: 0.25em;
   cursor: pointer;
+  color: var(--color-accent);
+  &:hover {
+    color: var(--color-primary);
+  }
 `;
 
 const HeroImage = styled.img`
