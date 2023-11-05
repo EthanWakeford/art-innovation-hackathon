@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import CreateProposal from './CreateProposal';
+import logo from '../assets/enginenear.png';
 
 const Header = () => {
   const [hamburgerEaten, setHamburgerEaten] = useState<boolean>(false);
@@ -22,7 +23,7 @@ const Header = () => {
   return (
     <>
       <HeaderWrapper>
-        <Proposal onClick={toggleCreateProposal}>Create Proposal</Proposal>
+        <Logo src={logo}></Logo>
         <Title to={'/'}>EngineNEAR</Title>
         <Hamburger
           onClick={consume}
@@ -30,6 +31,7 @@ const Header = () => {
           $hamburgerEaten={hamburgerEaten}
         />
         <NavContainer $hamburgerEaten={hamburgerEaten}>
+          <Proposal onClick={toggleCreateProposal}>Create Proposal</Proposal>
           <Link to={'/'} onClick={closeBurger}>
             Home
           </Link>
@@ -48,11 +50,16 @@ const Header = () => {
   );
 };
 
-const Proposal = styled.p`
+const Logo = styled.img`
   position: absolute;
-  top: 2vh;
+  top: 0vh;
   left: 2vw;
-  font-size: larger;
+  height: 70px;
+  width: 70px;
+`;
+
+const Proposal = styled.p`
+  font-size: large;
   font-weight: 500;
   color: var(--color-primary);
   text-decoration: inherit;

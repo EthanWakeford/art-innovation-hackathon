@@ -12,7 +12,7 @@ export const GlobalStyle = createGlobalStyle`
     --color-primary: #ffbd59;
     --color-secondary: #1d324f;
     --color-accent: #c82735;
-    --color-tertiary: #20abe8
+    --color-tertiary: #20abe8;
 
     --color-text-primary: #e9f1f7;
     --color-text-secondary: #c9d1d9;
