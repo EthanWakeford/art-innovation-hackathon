@@ -31,12 +31,12 @@ const Header = () => {
           $hamburgerEaten={hamburgerEaten}
         />
         <NavContainer $hamburgerEaten={hamburgerEaten}>
-          <Proposal onClick={toggleCreateProposal}>Create Proposal</Proposal>
+          <Proposal onClick={toggleCreateProposal}>Create Engine</Proposal>
           <Link to={"/"} onClick={closeBurger}>
             Home
           </Link>
-          <Link to={"/proposals"} onClick={closeBurger}>
-            Proposals
+          <Link to={"/engines"} onClick={closeBurger}>
+            Engines
           </Link>
           <Link to={"/projects"} onClick={closeBurger}>
             Projects
