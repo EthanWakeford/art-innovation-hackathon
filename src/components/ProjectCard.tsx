@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import ProjectCardDetailedView from "./ProjectDetailedView";
+import { useState } from "react";
 
 export interface ProjectCardProps {
   id?: string;
@@ -16,25 +18,44 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   date,
   imageUrl,
   textInfo,
-  onClick,
 }) => {
+  const [selectedProject, setSelectedProject] =
+    useState<ProjectCardProps | null>(null);
+
+  const handleCardClick = (project: ProjectCardProps) => {
+    setSelectedProject(project);
+    console.log(`${project.name} was clicked!`);
+  };
+
+  // When closing the modal
+  const handleClose = () => {
+    setSelectedProject(null);
+  };
   return (
-    <ProjectCardBody
-      className="project-card"
-      role="button"
-      tabIndex={0}
-      backgroundImage={imageUrl}
-      onClick={onClick}
-    >
-      <ImageContainer>
-        <CardImage src={imageUrl} alt={name} />
-      </ImageContainer>
-      <CardTitle>{name}</CardTitle>
-      <Details>{textInfo}</Details>
-      <time dateTime={date}>
-        Event Date: {new Date(date).toLocaleDateString()}
-      </time>
-    </ProjectCardBody>
+    <>
+      <ProjectCardBody
+        className="project-card"
+        role="button"
+        tabIndex={0}
+        backgroundImage={imageUrl}
+        onClick={() => handleCardClick({ name, date, imageUrl, textInfo })}
+      >
+        <ImageContainer>
+          <CardImage src={imageUrl} alt={name} />
+        </ImageContainer>
+        <CardTitle>{name}</CardTitle>
+        <Details>{textInfo}</Details>
+        <time dateTime={date}>
+          Event Date: {new Date(date).toLocaleDateString()}
+        </time>
+      </ProjectCardBody>
+      {selectedProject && (
+        <ProjectCardDetailedView
+          project={selectedProject}
+          onClose={handleClose}
+        />
+      )}
+    </>
   );
 };
 
