@@ -6,30 +6,113 @@ interface CreateProposalProps {
 }
 
 const CreateProposal: React.FC<CreateProposalProps> = ({ onClose }) => {
-  const [project, setProject] = useState<Project>({id: '';
-    type?: string;
-    name: string;
-    date: string;
-    imageUrl: string;
-    textInfo: string;
-  }});
+  const [project, setProject] = useState<Project>({
+    id: '',
+    type: '',
+    name: '',
+    date: '',
+    imageUrl: '',
+    textInfo: '',
+  });
+
+  const handleTitleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setProject({ ...project, name: e.target.value });
+  };
+
+  const handleDescriptionInput = (
+    e: React.ChangeEvent<HTMLTextAreaElement>
+  ) => {
+    setProject({ ...project, textInfo: e.target.value });
+  };
+
+  const handleTypeInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setProject({ ...project, type: e.target.value });
+  };
+
+  const handleDateInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setProject({ ...project, date: e.target.value });
+  };
 
   return (
     <ModalWrapper>
       <ModalContent>
-        <CloseButton onClick={onClose}>&times;</CloseButton>
-        <HeroImage src={project.imageUrl} alt={project.name} />
-        <Title>{project.name}</Title>
-        <Description>{project.textInfo}</Description>
+        <CloseButton className='fa-solid fa-xmark' onClick={onClose} />
+        <InputWrapper>
+          {project.imageUrl ? (
+            <HeroImage src={project.imageUrl} alt={project.name} />
+          ) : (
+            <ImageInput type='file' />
+          )}
+          <TitleInput
+            type='text'
+            name='title-input'
+            value={project.name}
+            placeholder='Event Name'
+            onChange={handleTitleInput}
+          ></TitleInput>
+          <TextInput
+            type='text'
+            name='type-input'
+            value={project.type}
+            placeholder='Type of Event'
+            onChange={handleTypeInput}
+          ></TextInput>
+          <TextInput
+            type='text'
+            name='date-input'
+            value={project.date}
+            placeholder='Date of your event'
+            onChange={handleDateInput}
+          ></TextInput>
+          <DescriptionInput
+            name='description-input'
+            placeholder='Description of your event'
+            value={project.textInfo}
+            rows={5}
+            onChange={handleDescriptionInput}
+          />
+        </InputWrapper>
         {/* Placeholder for Supporter components */}
         <SupporterWrapper>
           {/* Supporter components will go here */}
         </SupporterWrapper>
-        <SupportButton>Support</SupportButton>
+        <SupportButton>Submit</SupportButton>
       </ModalContent>
     </ModalWrapper>
   );
 };
+
+const TextInput = styled.input`
+  font-size: medium;
+  outline: none;
+  border: none;
+  text-align: center;
+  background-color: var(--color-background-main);
+  border-color: black;
+  lighting-color: black;
+  color: white;
+  &:focus-visible {
+    border: none;
+  }
+  line-height: 1.5;
+  margin: 20px 20%;
+`;
+
+const ImageInput = styled.input`
+  font-size: medium;
+  outline: none;
+  border: none;
+  text-align: center;
+  background-color: var(--color-background-main);
+  border-color: black;
+  lighting-color: black;
+  color: white;
+  &:focus-visible {
+    border: none;
+  }
+  line-height: 1.5;
+  margin: 20px 20%;
+`;
 
 const ModalWrapper = styled.div`
   position: fixed;
@@ -45,6 +128,7 @@ const ModalWrapper = styled.div`
 `;
 
 const ModalContent = styled.div`
+  position: relative;
   border-radius: 10px;
   width: 90vw; // Ensures padding from the screen edges
   height: 90vh; // Doesn't exceed the viewport height
@@ -52,17 +136,15 @@ const ModalContent = styled.div`
   background-color: var(--color-background-alt);
 `;
 
-const CloseButton = styled.span`
+const CloseButton = styled.i`
   position: absolute;
-  top: 2rem;
-  right: 8vw;
-  font-size: 1.5em;
-  border-radius: 25px;
-  padding: 0.25em;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
   cursor: pointer;
-  color: var(--color-accent);
+  color: var(--color-primary);
   &:hover {
-    color: var(--color-primary);
+    color: var(--color-accent);
   }
 `;
 
@@ -75,16 +157,38 @@ const HeroImage = styled.img`
   border-top-right-radius: 10px;
 `;
 
-const Title = styled.h2`
+const InputWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: space-between;
+  height: 80%;
+`;
+
+const TitleInput = styled(TextInput)`
   margin-top: 20px;
   padding: 0 20px;
-  text-align: center;
+  font-size: x-large;
+  padding-left: auto;
   color: var(--color-primary);
 `;
 
-const Description = styled.p`
-  margin: 20px 0;
+const DescriptionInput = styled.textarea`
+  margin: 20px 20%;
   padding: 0 20px;
+  font-size: medium;
+  outline: none;
+  border: none;
+  text-align: center;
+  background-color: var(--color-background-main);
+  border-color: black;
+  lighting-color: black;
+  color: white;
+  &:focus-visible {
+    border: none;
+  }
+  line-height: 1.5;
+  margin: 20px 20%;
 `;
 
 const SupporterWrapper = styled.section`

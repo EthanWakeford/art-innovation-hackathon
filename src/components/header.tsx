@@ -1,9 +1,11 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import CreateProposal from './CreateProposal';
 
 const Header = () => {
   const [hamburgerEaten, setHamburgerEaten] = useState<boolean>(false);
+  const [createProposalOpen, setCreateProposalOpen] = useState<boolean>(false);
 
   const consume = () => {
     setHamburgerEaten(!hamburgerEaten);
@@ -13,9 +15,14 @@ const Header = () => {
     setHamburgerEaten(false);
   };
 
+  const toggleCreateProposal = () => {
+    setCreateProposalOpen(!createProposalOpen);
+  };
+
   return (
     <>
       <HeaderWrapper>
+        <Proposal onClick={toggleCreateProposal}>Create Proposal</Proposal>
         <Title to={'/'}>Hackython</Title>
         <Hamburger
           onClick={consume}
@@ -36,9 +43,24 @@ const Header = () => {
         </NavContainer>
       </HeaderWrapper>
       <Spacer />
+      {createProposalOpen && <CreateProposal onClose={toggleCreateProposal} />}
     </>
   );
 };
+
+const Proposal = styled.p`
+  position: absolute;
+  top: 2vh;
+  left: 2vw;
+  font-size: larger;
+  font-weight: 500;
+  color: var(--color-primary);
+  text-decoration: inherit;
+  &:hover {
+    color: var(--color-accent);
+  }
+  cursor: pointer;
+`;
 
 const HeaderWrapper = styled.div`
   height: 8vh;
