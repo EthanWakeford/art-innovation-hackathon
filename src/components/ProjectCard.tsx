@@ -31,7 +31,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         className='project-card'
         role='button'
         tabIndex={0}
-        backgroundImage={imageUrl}
+        $backgroundImage={imageUrl}
         onClick={() => handleCardClick({ name, date, imageUrl, textInfo })}
       >
         <ImageContainer>
@@ -92,7 +92,7 @@ export const CardTitle = styled.h2`
   transition: all var(--animation-speed-medium) ease;
 `;
 
-const ProjectCardBody = styled.div<{ backgroundImage: string }>`
+const ProjectCardBody = styled.div<{ $backgroundImage: string }>`
   /* border: 1px solid var(--color-border); */
   padding: 0px 0px;
   border-radius: 20px;
@@ -126,7 +126,7 @@ const ProjectCardBody = styled.div<{ backgroundImage: string }>`
   }
 
   &::before {
-    background-image: url(${(props) => props.backgroundImage}) !important;
+    background-image: url(${(props) => props.$backgroundImage}) !important;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

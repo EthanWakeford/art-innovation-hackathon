@@ -1,17 +1,18 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
 :root {
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-family: Mont, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 400;
   
-    --color-background-main: hsl(249, 11%, 12%);
+    --color-background-main: #2e2d2d;
     --color-background-main-trans: hsla(249, 11%, 12%, 0.8);
     --color-background-alt: hsl(249, 11%, 15%);
-    --color-primary: #ecb028;
+    --color-primary: #ffbd59;
     --color-secondary: #1d324f;
     --color-accent: #c82735;
+    --color-tertiary: #20abe8
 
     --color-text-primary: #e9f1f7;
     --color-text-secondary: #c9d1d9;

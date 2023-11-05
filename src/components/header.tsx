@@ -1,7 +1,7 @@
-import styled from "styled-components";
-import { Link } from "react-router-dom";
-import { useState } from "react";
-import CreateProposal from "./CreateProposal";
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import CreateProposal from './CreateProposal';
 
 const Header = () => {
   const [hamburgerEaten, setHamburgerEaten] = useState<boolean>(false);
@@ -23,23 +23,23 @@ const Header = () => {
     <>
       <HeaderWrapper>
         <Proposal onClick={toggleCreateProposal}>Create Proposal</Proposal>
-        <Title to={"/"}>NEARly Events</Title>
+        <Title to={'/'}>EngineNEAR</Title>
         <Hamburger
           onClick={consume}
-          className="fa-solid fa-bars"
+          className='fa-solid fa-bars'
           $hamburgerEaten={hamburgerEaten}
         />
         <NavContainer $hamburgerEaten={hamburgerEaten}>
-          <Link to={"/"} onClick={closeBurger}>
+          <Link to={'/'} onClick={closeBurger}>
             Home
           </Link>
-          <Link to={"/proposals"} onClick={closeBurger}>
+          <Link to={'/proposals'} onClick={closeBurger}>
             Proposals
           </Link>
-          <Link to={"/projects"} onClick={closeBurger}>
+          <Link to={'/projects'} onClick={closeBurger}>
             Projects
           </Link>
-          <CloseButton className="fa-solid fa-xmark" onClick={consume} />
+          <CloseButton className='fa-solid fa-xmark' onClick={consume} />
         </NavContainer>
       </HeaderWrapper>
       <Spacer />
@@ -111,7 +111,7 @@ const Hamburger = styled.i<{ $hamburgerEaten: boolean }>`
   &:hover {
     color: var(--color-accent);
   }
-  ${(props) => props.$hamburgerEaten && "display: none"}
+  ${(props) => props.$hamburgerEaten && 'display: none'}
 `;
 
 const NavContainer = styled.div<{ $hamburgerEaten: boolean }>`
@@ -138,9 +138,9 @@ const NavContainer = styled.div<{ $hamburgerEaten: boolean }>`
     right: 0;
     left: 0;
     z-index: 11;
-    ${(props) => props.$hamburgerEaten && "display: flex"};
+    ${(props) => props.$hamburgerEaten && 'display: flex'};
   }
-  ${(props) => props.$hamburgerEaten && "display: flex"}
+  ${(props) => props.$hamburgerEaten && 'display: flex'}
 `;
 
 const Spacer = styled.div`
