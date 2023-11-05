@@ -106,7 +106,7 @@ const ProjectCardBody = styled.div<{ backgroundImage: string }>`
   align-self: stretch;
   height: 400px;
   justify-content: space-around;
-  background-color: var(--other-color);
+  /* background-color: var(--color-background-alt); */
   position: relative;
   overflow: hidden;
 
@@ -125,7 +125,7 @@ const ProjectCardBody = styled.div<{ backgroundImage: string }>`
   }
 
   &::before {
-    background-image: url(${(props) => props.backgroundImage});
+    background-image: url(${(props) => props.backgroundImage}) !important;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
