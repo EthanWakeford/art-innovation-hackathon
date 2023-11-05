@@ -9,21 +9,29 @@ const Header = () => {
     setHamburgerEaten(!hamburgerEaten);
   };
 
+  const closeBurger = () => {
+    setHamburgerEaten(false);
+  };
+
   return (
     <>
       <HeaderWrapper>
-        <Link to={'/'}>
-          <Title>Hackython</Title>
-        </Link>
+        <Title to={'/'}>Hackython</Title>
         <Hamburger
           onClick={consume}
           className='fa-solid fa-bars'
           $hamburgerEaten={hamburgerEaten}
         />
         <NavContainer $hamburgerEaten={hamburgerEaten}>
-          <Link to={'/'}>Home</Link>
-          <Link to={'/proposals'}>Proposals</Link>
-          <Link to={'/projects'}>Projects</Link>
+          <Link to={'/'} onClick={closeBurger}>
+            Home
+          </Link>
+          <Link to={'/proposals'} onClick={closeBurger}>
+            Proposals
+          </Link>
+          <Link to={'/projects'} onClick={closeBurger}>
+            Projects
+          </Link>
           <CloseButton className='fa-solid fa-xmark' onClick={consume} />
         </NavContainer>
       </HeaderWrapper>
@@ -38,11 +46,18 @@ const HeaderWrapper = styled.div`
   top: 0;
   background-color: black;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
 `;
 
-const Title = styled.h1`
+const Title = styled(Link)`
   text-align: center;
   margin: 0;
+  width: max-content;
+  font-size: 50px;
+  font-weight: 700;
 `;
 
 const Hamburger = styled.i<{ $hamburgerEaten: boolean }>`
@@ -50,6 +65,10 @@ const Hamburger = styled.i<{ $hamburgerEaten: boolean }>`
   top: 2vh;
   right: 2vw;
   font-size: xx-large;
+  cursor: pointer;
+  &:hover {
+    color: var(--color-accent);
+  }
   ${(props) => props.$hamburgerEaten && 'display: none'}
 `;
 
