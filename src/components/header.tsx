@@ -9,6 +9,10 @@ const Header = () => {
     setHamburgerEaten(!hamburgerEaten);
   };
 
+  const closeBurger = () => {
+    setHamburgerEaten(false);
+  };
+
   return (
     <>
       <HeaderWrapper>
@@ -19,9 +23,15 @@ const Header = () => {
           $hamburgerEaten={hamburgerEaten}
         />
         <NavContainer $hamburgerEaten={hamburgerEaten}>
-          <Link to={'/'}>Home</Link>
-          <Link to={'/proposals'}>Proposals</Link>
-          <Link to={'/projects'}>Projects</Link>
+          <Link to={'/'} onClick={closeBurger}>
+            Home
+          </Link>
+          <Link to={'/proposals'} onClick={closeBurger}>
+            Proposals
+          </Link>
+          <Link to={'/projects'} onClick={closeBurger}>
+            Projects
+          </Link>
           <CloseButton className='fa-solid fa-xmark' onClick={consume} />
         </NavContainer>
       </HeaderWrapper>
