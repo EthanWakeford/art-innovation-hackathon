@@ -1,7 +1,8 @@
-import styled from "styled-components";
-import { Link } from "react-router-dom";
-import { useState } from "react";
-import CreateProposal from "./CreateProposal";
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import CreateProposal from './CreateProposal';
+import logo from '../assets/enginenear.png';
 
 const Header = () => {
   const [hamburgerEaten, setHamburgerEaten] = useState<boolean>(false);
@@ -22,24 +23,25 @@ const Header = () => {
   return (
     <>
       <HeaderWrapper>
-        <Proposal onClick={toggleCreateProposal}>Create Proposal</Proposal>
-        <Title to={"/"}>NEARly Events</Title>
+        <Logo src={logo}></Logo>
+        <Title to={'/'}>EngineNEAR</Title>
         <Hamburger
           onClick={consume}
-          className="fa-solid fa-bars"
+          className='fa-solid fa-bars'
           $hamburgerEaten={hamburgerEaten}
         />
         <NavContainer $hamburgerEaten={hamburgerEaten}>
-          <Link to={"/"} onClick={closeBurger}>
+          <Proposal onClick={toggleCreateProposal}>Create Proposal</Proposal>
+          <Link to={'/'} onClick={closeBurger}>
             Home
           </Link>
-          <Link to={"/proposals"} onClick={closeBurger}>
+          <Link to={'/proposals'} onClick={closeBurger}>
             Proposals
           </Link>
-          <Link to={"/projects"} onClick={closeBurger}>
+          <Link to={'/projects'} onClick={closeBurger}>
             Projects
           </Link>
-          <CloseButton className="fa-solid fa-xmark" onClick={consume} />
+          <CloseButton className='fa-solid fa-xmark' onClick={consume} />
         </NavContainer>
       </HeaderWrapper>
       <Spacer />
@@ -48,11 +50,16 @@ const Header = () => {
   );
 };
 
-const Proposal = styled.p`
+const Logo = styled.img`
   position: absolute;
-  top: 2vh;
+  top: 0vh;
   left: 2vw;
-  font-size: larger;
+  height: 70px;
+  width: 70px;
+`;
+
+const Proposal = styled.p`
+  font-size: large;
   font-weight: 500;
   color: var(--color-primary);
   text-decoration: inherit;
@@ -77,7 +84,7 @@ const Proposal = styled.p`
 `;
 
 const HeaderWrapper = styled.div`
-  height: 8vh;
+  height: 80px;
   position: fixed;
   top: 0;
   background-color: black;
@@ -111,7 +118,7 @@ const Hamburger = styled.i<{ $hamburgerEaten: boolean }>`
   &:hover {
     color: var(--color-accent);
   }
-  ${(props) => props.$hamburgerEaten && "display: none"}
+  ${(props) => props.$hamburgerEaten && 'display: none'}
 `;
 
 const NavContainer = styled.div<{ $hamburgerEaten: boolean }>`
@@ -138,9 +145,9 @@ const NavContainer = styled.div<{ $hamburgerEaten: boolean }>`
     right: 0;
     left: 0;
     z-index: 11;
-    ${(props) => props.$hamburgerEaten && "display: flex"};
+    ${(props) => props.$hamburgerEaten && 'display: flex'};
   }
-  ${(props) => props.$hamburgerEaten && "display: flex"}
+  ${(props) => props.$hamburgerEaten && 'display: flex'}
 `;
 
 const Spacer = styled.div`

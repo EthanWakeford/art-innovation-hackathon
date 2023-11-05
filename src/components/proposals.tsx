@@ -1,7 +1,7 @@
-import { useState } from "react";
-import ProposalItem from "./proposalItem";
-import styled from "styled-components";
-import { PageTitleContainer } from "./projects";
+import { useState } from 'react';
+import ProposalItem from './proposalItem';
+import styled from 'styled-components';
+import { PageTitleContainer } from './projects';
 
 const proposalInfoHardcoded: Proposal[] = [
   {
@@ -192,6 +192,7 @@ const Proposals: React.FC = () => {
         <div>
           {proposalInfoHardcoded.map((proposal) => (
             <ProposalItem
+              key={proposal.id}
               id={proposal.id}
               onClick={handleClick}
               open={clickedItems.has(proposal.id)}
