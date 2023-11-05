@@ -28,7 +28,7 @@ const ProposalItem: React.FC<ProposalItemProps> = ({
             <h3>{name}</h3>
             <p>{type}</p>
             <p>{`Date: ${date}`}</p>
-            <p>{`About: ${textInfo}`}</p>
+            <About>{`About: ${textInfo}`}</About>
           </ContentHolder>
         </LargeProposal>
       </>
@@ -45,6 +45,13 @@ const ProposalItem: React.FC<ProposalItemProps> = ({
     );
   }
 };
+
+const About = styled.p`
+  text-align: left;
+  @media (max-width: 768px) {
+    text-align: center;
+  }
+`;
 
 const LargeProposal = styled.div`
   position: relative;
@@ -88,6 +95,10 @@ const ContentHolder = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  padding: 0 1rem 1rem 1rem;
+  @media (max-width: 768px) {
+    text-align: center;
+  }
 `;
 
 const SmallProposal = styled.div`
@@ -95,16 +106,18 @@ const SmallProposal = styled.div`
   background-color: black;
   border: 1px whitesmoke solid;
   justify-content: space-between;
-  padding: 0 10%;
+  padding: 0.1rem 0.5rem;
   align-items: center;
   margin: 0.5rem 0;
   transition: transform 0.3s ease-out;
+  text-align: center;
 `;
 
 const SmallImage = styled.img`
   border-radius: 50%;
   height: 100px;
   width: 100px;
+  object-fit: cover;
 `;
 
 export default ProposalItem;
