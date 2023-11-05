@@ -1,27 +1,17 @@
-# React + TypeScript + Vite
+# EngineNEAR
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+EngineNEAR is a smart contract dApp for artists and investors to secure funding, ensure fair payments, and engage in creative profit-sharing.
 
-Currently, two official plugins are available:
+!(https://storage.googleapis.com/taikai-storage/images/2fdaaf90-7c21-11ee-be37-e35334191813Mockups.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## EngineNEAR: Fuel a creative Engine, get paid from its output.
 
-## Expanding the ESLint configuration
+EngineNEAR is a revolutionary smart contract investment and funding platform specifically tailored for the creative sector. It operates on a foundation that guarantees transparency and precision in transactions made to artists, investors, venues, and event promoters.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+EngineNEAR empowers artists and creatives to gather microinvestments through a crowdfunding approach, seamlessly connecting them with a community of enthusiastic investors. It also empowers venues and event promoters by ensuring that their businesses are met with proper financing, equitable payouts, and confidence in event production.
 
-- Configure the top-level `parserOptions` property like this:
+This platform fosters a vibrant ecosystem where artists can pitch their projects (i.e. "Engines") with confidence, knowing that investors can come along and put money into their fund (i.e. "Fuel). After an event takes place, smart contract technology will ensure fair and accurate distribution of payments from the venue and promoters to the artists and their respective investors. It's a system where trust is built into the code—every transaction, every pledge, and every profit share is recorded on an immutable ledger in the NEAR ecosystem.
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+Investors on EngineNEAR don't just fund creativity, they become integral stakeholders in the artistic process and share in the success. As events unfold and profits are generated, investors receive a proportion of the earnings, creating a symbiotic relationship between the artist's vision and the investor's support. This "Direct Artist Equity" (DAE) allows all involved to form "Decentralized Autonomous Organizations" (DAOs) where future events, creative ideas, venue suggestions, profit-sharing, project mapping, and everything else can be agreed upon based on that DAO's governance model.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+EngineNEAR stands at the intersection of art and technology, providing a dynamic platform where the financial scaffolding of the creative world is as innovative and robust as the art it supports. It's a place where passion meets practicality, and where the future of creative funding is being reimagined and realized.
