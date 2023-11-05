@@ -1,15 +1,8 @@
-import styled from "styled-components";
-import ProjectCardDetailedView from "./ProjectDetailedView";
-import { useState } from "react";
+import styled from 'styled-components';
+import ProjectCardDetailedView from './ProjectDetailedView';
+import { useState } from 'react';
 
-export interface ProjectCardProps {
-  id?: string;
-  open?: boolean;
-  type?: string;
-  name: string;
-  date: string;
-  imageUrl: string;
-  textInfo: string;
+export interface ProjectCardProps extends Project {
   onClick?: () => void;
 }
 
@@ -34,8 +27,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   return (
     <>
       <ProjectCardBody
-        className="project-card"
-        role="button"
+        className='project-card'
+        role='button'
         tabIndex={0}
         backgroundImage={imageUrl}
         onClick={() => handleCardClick({ name, date, imageUrl, textInfo })}
@@ -118,7 +111,7 @@ const ProjectCardBody = styled.div<{ backgroundImage: string }>`
 
   &::before,
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     right: 0;
