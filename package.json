@@ -8,9 +8,12 @@
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview --open",
-    "serve": "cd server && npm run serve"
+    "serve": "cd server && npm run serve",
+    "start": "./start.sh",
+    "build:parcel": "parcel build index.html --public-url ./"
   },
   "dependencies": {
+    "env-cmd": "^10.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.18.0",
@@ -26,6 +29,8 @@
     "eslint": "^8.45.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
+    "parcel": "^2.10.2",
+    "process": "^0.11.10",
     "typescript": "^5.0.2",
     "vite": "^4.4.5"
   }
