@@ -1,9 +1,7 @@
 // CardContainer.tsx
 
-import React, { useState } from "react";
 import styled from "styled-components";
 import ProjectCard, { ProjectCardProps } from "./ProjectCard";
-import ProjectCardDetailedView from "./ProjectDetailedView";
 
 interface ProjectCardContainerProps {
   projects: ProjectCardProps[];
@@ -12,18 +10,7 @@ interface ProjectCardContainerProps {
 const ProjectCardContainer: React.FC<ProjectCardContainerProps> = ({
   projects,
 }) => {
-  const [selectedProject, setSelectedProject] =
-    useState<ProjectCardProps | null>(null);
-
-  const handleCardClick = (project: ProjectCardProps) => {
-    setSelectedProject(project);
-    console.log(`${project.name} was clicked!`)
-  };
-
-  // When closing the modal
-  const handleClose = () => {
-    setSelectedProject(null);
-  };
+  
   return (
     <Container>
       {projects.map((project) => (
@@ -36,15 +23,8 @@ const ProjectCardContainer: React.FC<ProjectCardContainerProps> = ({
           date={project.date}
           imageUrl={project.imageUrl}
           textInfo={project.textInfo}
-          onClick={() => handleCardClick(project)}
         />
       ))}
-      {selectedProject && (
-        <ProjectCardDetailedView
-          project={selectedProject}
-          onClose={handleClose}
-        />
-      )}
     </Container>
   );
 };
