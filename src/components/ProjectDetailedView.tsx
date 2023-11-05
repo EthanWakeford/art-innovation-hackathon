@@ -49,7 +49,7 @@ const ModalContent = styled.div`
   position: relative;
   border-radius: 10px;
   width: 90vw; // Ensures padding from the screen edges
-  height: 90vh; // Doesn't exceed the viewport height
+  height: 80vh; // Doesn't exceed the viewport height
   overflow-y: auto; // Allows scrolling for longer content
   background-color: var(--color-background-alt);
   z-index: 999; // Ensure it's above the pseudo-element
