@@ -15,7 +15,7 @@ const projects: ProjectCardProps[] = [
     date: 'Dec 10, 2023',
     imageUrl: creativeMixer,
     textInfo:
-      'This event marks the launch of ArtSync, a new Tulsa collective built around Tulsa art collaborators. With ArtSync, creatives can form groups, plan events, and present their projects in local event spaces. This kickoff mixer will include introductions to the platform’s features, live demos, and networking sessions.',
+      'This event marks the launch of ArtSync, a new Tulsa collective built around Tulsa art collaborators.',
   },
   {
     id: '-1',
@@ -24,7 +24,7 @@ const projects: ProjectCardProps[] = [
     date: 'Dec 15, 2023',
     imageUrl: RB,
     textInfo:
-      ' A dynamic festival event where many of the top R&B groups in Tulsa showcase their music to the community. Each group will have the opportunity to set up a booth and sell merch to festival goers.',
+      ' A dynamic festival event where many of the top R&B groups in Tulsa showcase their music to the community.',
   },
   {
     id: '-2',
@@ -33,7 +33,7 @@ const projects: ProjectCardProps[] = [
     imageUrl: hackathon,
     date: 'an 15-17, 2024',
     textInfo:
-      'Over a 48-hour period, creatives from all over the world will form teams to devise innovative art projects. Microfunders can participate by sponsoring materials and resources, with NEAR smart contracts tracking contributions and ensuring fair distribution of proceeds from future sales.',
+      'Over a 48-hour period, creatives from all over the world will form teams to devise innovative art projects..',
   },
   {
     id: '-3',
@@ -42,7 +42,7 @@ const projects: ProjectCardProps[] = [
     date: 'Jan 25, 2024',
     imageUrl: artSoiree,
     textInfo:
-      'An exclusive evening event connecting Tulsan artists with community patrons. The soiree includes a silent auction of both physical and digital art (NFTs), with smart contracts ensuring authenticity and artist royalties.',
+      'An exclusive evening event connecting Tulsan artists with community patrons.',
   },
   {
     id: '-4',
@@ -51,7 +51,7 @@ const projects: ProjectCardProps[] = [
     imageUrl: incubator,
     date: 'Feb 1, 2024',
     textInfo:
-      'This program pairs experienced artists and business mentors with emerging creatives. The platform will facilitate mentorship agreements via smart contracts, ensuring clear objectives, milestones, and equity arrangements for all parties involved.',
+      'This program pairs experienced artists and business mentors with emerging creatives.',
   },
   {
     id: '0',
@@ -61,7 +61,7 @@ const projects: ProjectCardProps[] = [
     date: 'Dec 10, 2023',
     imageUrl: creativeMixer,
     textInfo:
-      'This event marks the launch of ArtSync, a new Tulsa collective built around Tulsa art collaborators. With ArtSync, creatives can form groups, plan events, and present their projects in local event spaces. This kickoff mixer will include introductions to the platform’s features, live demos, and networking sessions.',
+      'This event marks the launch of ArtSync, a new Tulsa collective built around Tulsa art collaborators.',
   },
   {
     id: '-1',
@@ -70,7 +70,7 @@ const projects: ProjectCardProps[] = [
     date: 'Dec 15, 2023',
     imageUrl: RB,
     textInfo:
-      ' A dynamic festival event where many of the top R&B groups in Tulsa showcase their music to the community. Each group will have the opportunity to set up a booth and sell merch to festival goers.',
+      ' A dynamic festival event where many of the top R&B groups in Tulsa showcase their music to the community.',
   },
   {
     id: '-2',
@@ -79,7 +79,7 @@ const projects: ProjectCardProps[] = [
     imageUrl: hackathon,
     date: 'an 15-17, 2024',
     textInfo:
-      'Over a 48-hour period, creatives from all over the world will form teams to devise innovative art projects. Microfunders can participate by sponsoring materials and resources, with NEAR smart contracts tracking contributions and ensuring fair distribution of proceeds from future sales.',
+      'Over a 48-hour period, creatives from all over the world will form teams to devise innovative art projects.',
   },
   {
     id: '-3',
@@ -88,7 +88,7 @@ const projects: ProjectCardProps[] = [
     date: 'Jan 25, 2024',
     imageUrl: artSoiree,
     textInfo:
-      'An exclusive evening event connecting Tulsan artists with community patrons. The soiree includes a silent auction of both physical and digital art (NFTs), with smart contracts ensuring authenticity and artist royalties.',
+      'An exclusive evening event connecting Tulsan artists with community patrons.',
   },
   {
     id: '-4',
@@ -97,7 +97,7 @@ const projects: ProjectCardProps[] = [
     imageUrl: incubator,
     date: 'Feb 1, 2024',
     textInfo:
-      'This program pairs experienced artists and business mentors with emerging creatives. The platform will facilitate mentorship agreements via smart contracts, ensuring clear objectives, milestones, and equity arrangements for all parties involved.',
+      'This program pairs experienced artists and business mentors with emerging creatives.',
   },
   {
     id: "1",
@@ -264,7 +264,7 @@ const Hero = () => {
   return (
     <HeroContents>
       <HeroTagline>
-        <h1>Discover Amazing Creative & Cultural Events</h1>
+        <h1>Fuel a creative Engine,<br></br>get paid from its output.</h1>
         <p>
           Explore the Engines that have reached their fuel requirements and are
           currently being planned.
