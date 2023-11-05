@@ -1,3 +1,5 @@
+npm run build
+
 # from the dropdown at the top of Cloud Console:
 export GCLOUD_PROJECT="art-innovation-hackathon" 
 # from Step 2.2 above:
