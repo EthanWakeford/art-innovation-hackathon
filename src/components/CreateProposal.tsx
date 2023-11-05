@@ -143,6 +143,7 @@ const CloseButton = styled.i`
   font-size: 2rem;
   cursor: pointer;
   color: var(--color-primary);
+  text-shadow: black 0 0 10px;
   &:hover {
     color: var(--color-accent);
   }
