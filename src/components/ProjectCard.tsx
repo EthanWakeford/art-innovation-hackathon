@@ -99,6 +99,7 @@ const ProjectCardBody = styled.div<{ backgroundImage: string }>`
   width: 270px;
   display: flex;
   align-items: center;
+  text-align: center;
   flex-direction: column;
   transition: all var(--animation-speed-medium) ease;
   box-shadow: none;
