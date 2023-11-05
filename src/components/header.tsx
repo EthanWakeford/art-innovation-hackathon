@@ -84,7 +84,7 @@ const Proposal = styled.p`
 `;
 
 const HeaderWrapper = styled.div`
-  height: 8vh;
+  height: 80px;
   position: fixed;
   top: 0;
   background-color: black;
